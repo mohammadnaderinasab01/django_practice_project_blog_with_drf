@@ -64,3 +64,27 @@ Before running this project, ensure you have the following installed:
    ```bash
    git clone https://github.com/mohammadnaderinasab01/django_practice_project_blog_with_drf.git
    cd django_practice_project_blog_with_drf
+
+2. **Set Up a Virtual Environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+
+4. **Set Up Environment Variables**:
+Create a .env file in the root directory and add the following variables:
+   ```bash
+   DJANGO_SECRET_KEY=your_secret_key_here
+   ALLOWED_HOSTS=your_allowed_hosts_here
+   ```
+
+5. **Apply migrations**:
+   ```bash
+   python manage.py migrate
+
+6. **Run the Development Server**:
+   ```bash
+   python manage.py runserver
