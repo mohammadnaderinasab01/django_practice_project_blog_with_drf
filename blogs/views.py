@@ -35,12 +35,18 @@ class BlogViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         if self.action == 'list':
-            print('fuck yoooooooooooooou')
             query = self.request.query_params.get('q', '')
             return Blog.objects.filter(
                 Q(title__icontains=query) | Q(description__icontains=query)
             )
         return super().get_queryset()
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(name='q', type=str, description='search query', required=False),
+        ])
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
 
     def update(self, request, *args, **kwargs):
         kwargs['partial'] = True
