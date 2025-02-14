@@ -33,6 +33,15 @@ class BlogViewSet(viewsets.ModelViewSet):
             return BlogCreateUpdateSerializer
         return super().get_serializer_class()
 
+    def get_queryset(self):
+        if self.action == 'list':
+            print('fuck yoooooooooooooou')
+            query = self.request.query_params.get('q', '')
+            return Blog.objects.filter(
+                Q(title__icontains=query) | Q(description__icontains=query)
+            )
+        return super().get_queryset()
+
     def update(self, request, *args, **kwargs):
         kwargs['partial'] = True
         return super().update(request, *args, **kwargs)

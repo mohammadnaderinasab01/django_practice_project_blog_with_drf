@@ -78,7 +78,6 @@ Before running this project, ensure you have the following installed:
 Create a .env file in the root directory and add the following variables:
    ```bash
    DJANGO_SECRET_KEY=your_secret_key_here
-   ALLOWED_HOSTS=your_allowed_hosts_here
    ```
 
 5. **Apply migrations**:
