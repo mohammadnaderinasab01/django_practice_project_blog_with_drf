@@ -1,0 +1,1 @@
+# django_practice_project_blog_with_drf
