@@ -38,11 +38,11 @@ This project is a **blogging platform** built using Django and Django REST Frame
   - Paginate comments and blog lists for better performance.
 
 - **Authentication**:
-  - User authentication using Django's built-in `User` model.
+  - User authentication using `User` model in the users app.
   - Only authenticated users can vote, comment, or create/update/delete blogs.
 
 - **Documentation**:
-  - API documentation generated using tools like drf-spectacular or drf-yasg.
+  - API documentation generated using drf-spectacular.
 
 ---
 
@@ -50,7 +50,7 @@ This project is a **blogging platform** built using Django and Django REST Frame
 
 Before running this project, ensure you have the following installed:
 
-- Python 3.8+ ([Download Python](https://www.python.org/downloads/))
+- Python 3.10.12+ ([Download Python](https://www.python.org/downloads/))
 - pip (comes with Python)
 - virtualenv (optional but recommended)
 - PostgreSQL or another supported database (SQLite is used by default for development)
